@@ -1,3 +1,3 @@
-"""Reusable desktop publisher for TikTok's Content Posting API."""
+"""Reusable desktop publisher for creator-approved short-form video uploads."""
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"

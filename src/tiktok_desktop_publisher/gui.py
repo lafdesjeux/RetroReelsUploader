@@ -10,13 +10,14 @@ from tkinter import filedialog, messagebox, ttk
 from zoneinfo import ZoneInfo
 
 from .api import utf16_length
+from .config import DISPLAY_NAME
 from .service import PublisherService
 
 
 class PublisherGUI(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
-        self.title("TikTok Desktop Publisher")
+        self.title(DISPLAY_NAME)
         self.geometry("920x720")
         self.minsize(820, 650)
         self.events: queue.Queue[tuple[str, object]] = queue.Queue()
@@ -40,7 +41,7 @@ class PublisherGUI(tk.Tk):
     def _build_ui(self) -> None:
         header = ttk.Frame(self, padding=(18, 14))
         header.pack(fill="x")
-        ttk.Label(header, text="TikTok Desktop Publisher", style="Title.TLabel").pack(side="left")
+        ttk.Label(header, text=DISPLAY_NAME, style="Title.TLabel").pack(side="left")
         self.connection_status = tk.StringVar(value="Not connected")
         self.connection_label = ttk.Label(header, textvariable=self.connection_status)
         self.connection_label.pack(side="right")
@@ -377,7 +378,7 @@ class PublisherGUI(tk.Tk):
             elif event.startswith("error:"):
                 action = event.split(":", 1)[1]
                 self.publish_status.set(f"{action} failed: {value}")
-                messagebox.showerror("TikTok Desktop Publisher", str(value))
+                messagebox.showerror(DISPLAY_NAME, str(value))
             elif event == "result:connect" or event == "result:creator":
                 self._display_creator(value)
             elif event == "result:disconnect":

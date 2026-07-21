@@ -2,7 +2,7 @@
 
 Record one uninterrupted desktop capture in the TikTok Developer sandbox.
 
-1. Open **TikTok Desktop Publisher** from the desktop.
+1. Open **ReelsUploader** from the desktop.
 2. Start on the creator-facing **Account** screen. Do not open the operator-only Settings tab during the demo.
 3. Select **Connect with TikTok**.
 4. Show TikTok Login Kit in the browser, account login, requested scopes, and consent.

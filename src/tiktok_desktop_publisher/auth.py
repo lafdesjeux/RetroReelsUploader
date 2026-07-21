@@ -13,6 +13,8 @@ from urllib.parse import parse_qs, urlencode, urlparse
 
 import requests
 
+from .config import DISPLAY_NAME
+
 AUTHORIZE_URL = "https://www.tiktok.com/v2/auth/authorize/"
 TOKEN_URL = "https://open.tiktokapis.com/v2/oauth/token/"
 REVOKE_URL = "https://open.tiktokapis.com/v2/oauth/revoke/"
@@ -115,7 +117,7 @@ class OAuthDesktopFlow:
                 body = (
                     "<!doctype html><html><body style='font-family:system-ui;padding:3rem'>"
                     "<h1>Authorization received</h1>"
-                    "<p>You can return to TikTok Desktop Publisher.</p>"
+                    f"<p>You can return to {DISPLAY_NAME}.</p>"
                     "</body></html>"
                 ).encode("utf-8")
                 self.send_response(200)

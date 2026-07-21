@@ -1,8 +1,8 @@
-# TikTok Desktop Publisher
+# ReelsUploader
 
-## Release 1.0.1
+## Release 1.0.2
 
-Fixes the desktop GUI startup status label on Tkinter.
+Renames the product to **ReelsUploader** while retaining TikTok references only where required to describe login, permissions, and publishing.
 
 
 A reusable desktop application and command-line tool for creators who want to authorize their own TikTok account, select a local video, choose the privacy and interaction settings returned by TikTok, and publish through the official Content Posting API.
@@ -57,7 +57,7 @@ python run_gui.py
 or after installation:
 
 ```bash
-tiktok-publisher-gui
+reels-uploader-gui
 ```
 
 The application operator configures the TikTok app client key, client secret, and redirect URI once in **Settings**. Creators then use **Account → Connect with TikTok**; the browser handles login and consent. Tokens are not written to this repository.

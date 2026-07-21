@@ -10,6 +10,8 @@ from typing import Any
 
 from platformdirs import user_config_dir
 
+DISPLAY_NAME = "ReelsUploader"
+# Legacy storage identifier retained for backward compatibility.
 APP_NAME = "TikTokDesktopPublisher"
 APP_AUTHOR = "OpenSource"
 KEYRING_SERVICE = "tiktok-desktop-publisher"

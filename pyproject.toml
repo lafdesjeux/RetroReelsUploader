@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tiktok-desktop-publisher"
-version = "1.0.1"
-description = "Reusable desktop interface and CLI for TikTok's Content Posting API"
+version = "1.0.2"
+description = "Reusable desktop interface and CLI for creator-approved short-form video publishing"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "TikTok Desktop Publisher contributors"}]
+authors = [{name = "ReelsUploader contributors"}]
 dependencies = [
   "requests>=2.31,<3",
   "platformdirs>=4,<5",
@@ -25,6 +25,9 @@ classifiers = [
 ]
 
 [project.scripts]
+reels-uploader = "tiktok_desktop_publisher.cli:main"
+reels-uploader-gui = "tiktok_desktop_publisher.gui:main"
+# Backward-compatible aliases.
 tiktok-publisher = "tiktok_desktop_publisher.cli:main"
 tiktok-publisher-gui = "tiktok_desktop_publisher.gui:main"
 
